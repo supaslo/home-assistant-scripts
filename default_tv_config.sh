@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
-HOST="46.110.91.174 8085"
+HOST="46.110.91.174"
+PORT="8085"
 
 {
   echo "switch-set1.1"
@@ -18,4 +19,4 @@ HOST="46.110.91.174 8085"
   echo "switch-set7.1"
   sleep 2
   echo "switch-set8.2"
-} | telnet = "$HOST"
+} | nc "$HOST" "$PORT"
